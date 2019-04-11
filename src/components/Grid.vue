@@ -39,6 +39,6 @@ export default {
     overflow: hidden;
 
     margin: 40px auto;
-    border-radius: 20px;
+    border-radius: 15px;
   }
 </style>
