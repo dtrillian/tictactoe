@@ -1,0 +1,19 @@
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+
+  "env": {
+    "test": {
+      "presets": ["@babel/preset-env"]
+    }
+  },
+
+  "plugins": [
+    "@babel/plugin-syntax-flow",
+    "@babel/plugin-transform-flow-strip-types",
+    ["@babel/plugin-transform-runtime", {
+      "corejs": 2
+    }]
+  ]
+}
