@@ -1,6 +1,6 @@
 <template>
   <div class="global-container">
-    <Menu/>
+    <Menu></Menu>
     <div class="tictactoe-wrapper">
       test
     </div>

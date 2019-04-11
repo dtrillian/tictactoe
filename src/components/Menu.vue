@@ -91,6 +91,20 @@ export default {
   color: black;
 }
 
+.logo__word {
+  &:nth-of-type(1) {
+    color: $color1;
+  }
+
+  &:nth-of-type(2) {
+    color: $color2;
+  }
+
+  &:nth-of-type(3) {
+    color: $color3;
+  }
+}
+
 .logo, .choices__btn {
   cursor: $cursor;
 }
