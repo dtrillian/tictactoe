@@ -78,7 +78,7 @@ export default {
 
 .logo {
   position: absolute;
-  top: 45%;
+  top: calc(50% - 20px);
   left: 50%;
   transform: translate(-50%, -50%);
   width: 320px;
