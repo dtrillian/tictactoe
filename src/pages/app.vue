@@ -2,6 +2,7 @@
   <div class="global-container">
     <Menu></Menu>
     <div class="tictactoe-wrapper">
+      <Toaster :toaster="toaster"></Toaster>
       <Score></Score>
       <Grid></Grid>
     </div>
@@ -13,7 +14,7 @@ import Vue from 'vue'
 import Menu from '../components/Menu'
 import Grid from '../components/Grid'
 import Score from '../components/Score'
-// import Warning from '../components/Warning'
+import Toaster from '../components/Toaster'
 
 export default Vue.extend({
   name: 'App',
@@ -21,13 +22,16 @@ export default Vue.extend({
     Menu,
     Grid,
     Score,
-    // Warning,
+    Toaster,
   },
   data() {
     return {
     }
   },
   computed: {
+    toaster() {
+      return this.$store.getters.toaster
+    }
   },
   methods: {
   },

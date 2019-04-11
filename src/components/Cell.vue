@@ -16,24 +16,27 @@ export default {
   data () {
     return {
       busy: false,
-      pawn: '',
     }
   },
   computed: {
     ...mapGetters(['currentPlayer', 'grid']),
-  },
-  methods: {
-    placePawn () {
-      if (!this.busy) {
-        this.pawn = this.currentPlayer;
-        this.busy = true;
-        this.$store.dispatch('PLACE_PAWN', this.number)
+    pawn: {
+      get() {
+        return this.grid[this.number]
+      },
+      set(value) {
+        this.$set(this.grid, this.number, this.currentPlayer)
+        this.$store.dispatch('PLACE_PAWN', this.number, value)
       }
     }
   },
-  mounted() {
-    this.pawn = this.grid[this.number]
-  }
+  methods: {
+    placePawn () {
+      if (this.grid[this.number] === '') {
+        this.pawn = this.currentPlayer;
+      }
+    }
+  },
 }
 </script>
 

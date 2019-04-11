@@ -17,9 +17,6 @@ export default {
       n: 1,
     }
   },
-  mounted() {
-
-  }
 }
 </script>
 
