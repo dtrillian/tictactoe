@@ -1,6 +1,6 @@
 <template>
   <div class="grid">
-    <Cell v-for="n in 9" v-bind:key="n" :number="n"></Cell>
+    <Cell v-for="n in 9" v-bind:key="n" :number="n - 1"></Cell>
   </div>
 </template>
 

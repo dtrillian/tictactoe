@@ -15,12 +15,12 @@ export default {
   },
   data () {
     return {
-      pawn: '',
       busy: false,
+      pawn: '',
     }
   },
   computed: {
-    ...mapGetters(['currentPlayer']),
+    ...mapGetters(['currentPlayer', 'grid']),
   },
   methods: {
     placePawn () {
@@ -32,7 +32,7 @@ export default {
     }
   },
   mounted() {
-
+    this.pawn = this.grid[this.number]
   }
 }
 </script>
